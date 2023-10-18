@@ -1,3 +1,4 @@
+//find first occurence
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,7 +12,7 @@ int first_occ( int arr[], int target, int n){
     while(s<=e){
         if(arr[mid]==target) {
             ans = mid;
-            e = mid-1;
+            e = mid-1;// ans store krke left me jaan hai .
         }
         else if(target > arr[mid]){
             s=mid+1;
@@ -28,7 +29,7 @@ int main(){
     int arr[] = {1,2,3,4,4,5,6,7,8};
     int target = 9;
     int n = 10;
-int Ans = first_occ(arr, target, n);
+    int Ans = first_occ(arr, target, n);
     if(Ans==-1){
         cout<<"Element is not present :( "<<endl;
     }
