@@ -8,7 +8,8 @@ using namespace std;
 int binarysearch(int arr[], int n,int target){
     int start = 0;
     int end = n-1;
-    int mid = (start+end)/2;
+    //int mid = (start+end)/2;// this can do integer over flow
+    int mid = (start+(end - start)/2);// while it will it will avoid such situation.
     while(start <= end){
         if(arr[mid] == target){ // if element is found will return the index of target element
             return mid;
