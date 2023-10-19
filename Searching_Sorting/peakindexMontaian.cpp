@@ -26,12 +26,35 @@ int peakMount(int arr[], int n){
     }
     return mid;
 }
+//in vector
+int peakMountV(vector<int>&arr){
+    int n = arr.size();
+    int s = 0;
+    int e = n-1;
+    int mid = s + (e-s)/2;
+    int ans = -1;
+    
+    while(s<e){
+        if(arr[mid] > arr[mid+1]){
+            
+            e = mid;
+            ans = mid;
+
+        }
+        else if (arr[mid]<arr[mid+1]){
+            s= mid+1;
+        }
+        mid = s+(e-s)/2;
+    }
+    return mid;
+}
 
 int main(){
-    int arr[]={0,10,5,2};
+    vector<int> arr{0,10,5,2};
+    //int arr[]={0,10,5,2};
     //int target = 5;
     int n =4;
-    int Ans = peakMount(arr, n);
+    int Ans = peakMountV(arr);
     if(Ans==-1){
         cout<<"Element is not present :( "<<endl;
     }
