@@ -16,10 +16,14 @@ int findPivot(vector<int> &arr){
     
     while(s<=e){
         if(s==e) return ans = mid;
-        if(arr[mid]>arr[mid+1]) {
+        if(mid+1<n && arr[mid]>arr[mid+1]) {
+            //mid+1<n
+            // yaha tu m galti karoge hi 
             return ans = mid;
         }
-        else if(arr[mid]<arr[mid-1]){
+        else if(mid-1 >=0 && arr[mid]<arr[mid-1]){
+            //mid-1 >=0 yeh condtion add krni thi
+            // conditon laga bhul gye the .
             return ans = mid-1;
         }
         else if (arr[s]>arr[mid]){
@@ -36,7 +40,8 @@ int findPivot(vector<int> &arr){
 }
 
 int main(){
-    vector<int> arr{0,10,2,5};
+    //vector<int> arr{0,10,2,5};
+    vector<int> arr{1,3};
     //int arr[]={0,10,5,2};
     //int target = 5;
     int n =4;
