@@ -22,13 +22,30 @@
     int e = n-1;
     int mid = s + (e-s)/2;
 
+    while(s<=e){
+        int r = mid/col;
+        int c = mid%col;
+        int current = matrix[r][c];
+        if(target == current){
+            return true;
+        }
+        else if(target > current){
+            s = mid+1;
+        }
+        else {
+            e = mid -1;
+        }
+        mid = s+(e-s)/2;
+    }
+    return false;
+
 
 
  }
 
  int main(){
     vector <vector<int>> matrix {{2,4,6,8},{10,12,14,16},{18,20,22,24},{28,34,40,50}};
-    int target=34;// cin>>target;
+    int target=30;// cin>>target;
 
     bool ans = search2d(matrix,target);
     cout<<ans;
