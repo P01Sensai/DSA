@@ -8,7 +8,7 @@
  1d - 2d =>  i = mid/col, j = mid%col */
 
  //we will also using last and first occurence concept as well
-
+// The O(log(m*n)) 
  #include <bits/stdc++.h>
  using namespace std;
 
