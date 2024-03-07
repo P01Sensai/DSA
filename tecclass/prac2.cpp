@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> leftRotate(const std::vector<int>& arr, int d) {
+vector<int> leftRotate(vector<int>& arr, int d) {
     int n = arr.size();
     vector<int> rotatedArr(n);
     for (int i = 0; i < n; ++i) {
